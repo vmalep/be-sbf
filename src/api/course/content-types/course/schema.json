@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "course"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "school_year": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school-year.school-year",
+      "inversedBy": "courses"
+    },
+    "libraries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::library.library",
+      "mappedBy": "course"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "libraries",
+  "info": {
+    "singularName": "library",
+    "pluralName": "libraries",
+    "displayName": "Library",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "libraries"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book.book",
+      "mappedBy": "library"
+    },
+    "ISDN": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    }
+  }
+}

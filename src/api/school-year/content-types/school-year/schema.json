@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "school_years",
+  "info": {
+    "singularName": "school-year",
+    "pluralName": "school-years",
+    "displayName": "schoolYear"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course",
+      "mappedBy": "school_year"
+    }
+  }
+}
