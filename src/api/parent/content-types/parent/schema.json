@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parents",
+  "info": {
+    "singularName": "parent",
+    "pluralName": "parents",
+    "displayName": "Parent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book.book",
+      "mappedBy": "parent"
+    }
+  }
+}

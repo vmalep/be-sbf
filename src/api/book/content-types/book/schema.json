@@ -15,12 +15,6 @@
     "price": {
       "type": "decimal"
     },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "books"
-    },
     "library": {
       "type": "relation",
       "relation": "manyToOne",
@@ -29,6 +23,12 @@
     },
     "is_available": {
       "type": "boolean"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::parent.parent",
+      "inversedBy": "books"
     }
   }
 }

@@ -62,12 +62,6 @@
       "target": "plugin::users-permissions.role",
       "inversedBy": "users",
       "configurable": false
-    },
-    "books": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::book.book",
-      "mappedBy": "users_permissions_user"
     }
   }
 }

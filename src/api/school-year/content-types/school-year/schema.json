@@ -4,7 +4,8 @@
   "info": {
     "singularName": "school-year",
     "pluralName": "school-years",
-    "displayName": "schoolYear"
+    "displayName": "School Year",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
