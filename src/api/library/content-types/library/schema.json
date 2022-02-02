@@ -27,10 +27,10 @@
       "target": "api::book.book",
       "mappedBy": "library"
     },
-    "ISDN": {
+    "author": {
       "type": "string"
     },
-    "author": {
+    "isdn": {
       "type": "string"
     }
   }

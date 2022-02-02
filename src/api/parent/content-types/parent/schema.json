@@ -28,6 +28,9 @@
       "relation": "oneToMany",
       "target": "api::book.book",
       "mappedBy": "parent"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }
