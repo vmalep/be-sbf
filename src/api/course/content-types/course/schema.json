@@ -28,7 +28,7 @@
       "target": "api::library.library",
       "mappedBy": "course"
     },
-    "schoolYearId": {
+    "school_year_id": {
       "type": "string"
     }
   }

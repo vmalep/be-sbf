@@ -33,7 +33,7 @@
     "isdn": {
       "type": "string"
     },
-    "schoolYearId": {
+    "school_year_id": {
       "type": "string"
     }
   }

@@ -30,7 +30,7 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "books"
     },
-    "schoolYearId": {
+    "school_year_id": {
       "type": "string"
     },
     "comment": {
@@ -48,7 +48,7 @@
         "bindingCopy"
       ]
     },
-    "imgUrl": {
+    "img_url": {
       "type": "string"
     }
   }
