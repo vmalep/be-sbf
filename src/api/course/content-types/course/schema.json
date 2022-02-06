@@ -27,6 +27,9 @@
       "relation": "oneToMany",
       "target": "api::library.library",
       "mappedBy": "course"
+    },
+    "schoolYearId": {
+      "type": "string"
     }
   }
 }

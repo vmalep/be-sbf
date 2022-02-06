@@ -32,6 +32,9 @@
     },
     "isdn": {
       "type": "string"
+    },
+    "schoolYearId": {
+      "type": "string"
     }
   }
 }

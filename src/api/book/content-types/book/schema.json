@@ -24,17 +24,32 @@
     "is_available": {
       "type": "boolean"
     },
-    "parent": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::parent.parent",
-      "inversedBy": "books"
-    },
     "users_permissions_user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "books"
+    },
+    "schoolYearId": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "richtext"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "asNew",
+        "fine",
+        "veryGood",
+        "good",
+        "fair",
+        "poor",
+        "bindingCopy"
+      ]
+    },
+    "imgUrl": {
+      "type": "string"
     }
   }
 }
