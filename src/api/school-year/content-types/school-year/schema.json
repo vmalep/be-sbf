@@ -21,6 +21,12 @@
       "relation": "oneToMany",
       "target": "api::course.course",
       "mappedBy": "school_year"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book.book",
+      "mappedBy": "school_year"
     }
   }
 }

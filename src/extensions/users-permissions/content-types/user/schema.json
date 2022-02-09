@@ -77,6 +77,23 @@
       "relation": "oneToMany",
       "target": "api::book.book",
       "mappedBy": "users_permissions_user"
+    },
+    "school_years": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::school-year.school-year"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "reservations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reservation.reservation",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

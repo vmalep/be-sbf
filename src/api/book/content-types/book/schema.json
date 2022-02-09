@@ -50,6 +50,18 @@
     },
     "img_url": {
       "type": "string"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "books"
+    },
+    "school_year": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school-year.school-year",
+      "inversedBy": "books"
     }
   }
 }

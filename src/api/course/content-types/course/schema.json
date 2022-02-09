@@ -30,6 +30,12 @@
     },
     "school_year_id": {
       "type": "string"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book.book",
+      "mappedBy": "course"
     }
   }
 }
