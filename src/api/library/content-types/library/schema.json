@@ -33,8 +33,11 @@
     "isdn": {
       "type": "string"
     },
-    "school_year_id": {
-      "type": "string"
+    "school_year": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school-year.school-year",
+      "inversedBy": "libraries"
     }
   }
 }
