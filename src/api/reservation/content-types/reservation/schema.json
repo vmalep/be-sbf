@@ -4,7 +4,8 @@
   "info": {
     "singularName": "reservation",
     "pluralName": "reservations",
-    "displayName": "Reservation"
+    "displayName": "Reservation",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -28,6 +29,7 @@
     "status": {
       "type": "enumeration",
       "enum": [
+        "interested",
         "proposed",
         "confirmed",
         "rejected"
