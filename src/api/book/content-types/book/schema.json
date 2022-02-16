@@ -62,6 +62,12 @@
       "relation": "manyToOne",
       "target": "api::school-year.school-year",
       "inversedBy": "books"
+    },
+    "reservations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reservation.reservation",
+      "mappedBy": "book"
     }
   }
 }

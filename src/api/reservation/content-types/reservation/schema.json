@@ -17,8 +17,9 @@
     },
     "book": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::book.book"
+      "relation": "manyToOne",
+      "target": "api::book.book",
+      "inversedBy": "reservations"
     },
     "users_permissions_user": {
       "type": "relation",
