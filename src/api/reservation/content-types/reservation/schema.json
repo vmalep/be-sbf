@@ -35,8 +35,8 @@
         "confirmed",
         "rejected"
       ],
-      "default": "proposed",
-      "required": true
+      "default": "interested",
+      "required": false
     }
   }
 }
