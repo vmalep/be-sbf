@@ -1,4 +1,5 @@
 module.exports = (plugin) => {
+  //console.log('users-permissions start');
   const sanitizeOutput = (user) => {
     const {
       password,
@@ -8,21 +9,25 @@ module.exports = (plugin) => {
     } = user; // be careful, you need to omit other private attributes yourself
     return sanitizedUser;
   };
-  // plugin.controllers.user.me = async (ctx) => {
-  //   const user = await strapi.query("plugin::users-permissions.user").findOne({
-  //     where: { id: ctx.state.user.id },
-  //     populate: { card: true, branch: true },
-  //   });
+  plugin.controllers.user.me = async (ctx) => {
+    //console.log('user.me');
+    const user = await strapi.query("plugin::users-permissions.user").findOne({
+      where: { id: ctx.state.user.id },
+      populate: { card: true, branch: true },
+    });
 
-  //   if (!user) {
-  //     return ctx.unauthorized();
-  //   }
+    if (!user) {
+      return ctx.unauthorized();
+    }
 
-  //   ctx.body = await sanitizeUser(user, ctx);
-  // };
-
+    //ctx.body = await sanitizeUser(user, ctx);
+    ctx.body = await sanitizeOutput(user, ctx);
+  };
+  
   plugin.controllers.user.find = async (ctx) => {
+    //console.log('requesting find all users, start');
     if (ctx.request.query.pagination) {
+      //console.log(ctx.request.query.pagination);
       const {
         pagination: { page, pageSize },
       } = ctx.request.query;
@@ -41,7 +46,7 @@ module.exports = (plugin) => {
           populate: { role: true },
         }
       );
-
+      //console.log('users = ', users);
       return {
         data: users.map((user) => {
           const userId = user.id;
@@ -122,6 +127,7 @@ module.exports = (plugin) => {
     const roleId = user.role.id;
     delete user.id;
     delete user.role.id;
+    //console.log('user = ', user);
     return {
       data: {
         id: userId,
