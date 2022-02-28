@@ -9,7 +9,8 @@ module.exports = (plugin) => {
     } = user; // be careful, you need to omit other private attributes yourself
     return sanitizedUser;
   };
-  plugin.controllers.user.me = async (ctx) => {
+  // Generate 401 error (TBC)
+/*   plugin.controllers.user.me = async (ctx) => {
     //console.log('user.me');
     const user = await strapi.query("plugin::users-permissions.user").findOne({
       where: { id: ctx.state.user.id },
@@ -22,7 +23,7 @@ module.exports = (plugin) => {
 
     //ctx.body = await sanitizeUser(user, ctx);
     ctx.body = await sanitizeOutput(user, ctx);
-  };
+  }; */
   
   plugin.controllers.user.find = async (ctx) => {
     //console.log('requesting find all users, start');
