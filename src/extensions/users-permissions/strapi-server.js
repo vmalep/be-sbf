@@ -139,6 +139,8 @@ module.exports = (plugin) => {
               attributes: user.role,
             },
           },
+          books,
+          reservations,
         },
       },
     };
