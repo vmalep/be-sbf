@@ -80,7 +80,7 @@ module.exports = (plugin) => {
         "plugin::users-permissions.user",
         {
           ...ctx.request.query,
-          populate: { role: true },
+          populate: { role: true, books: true, reservations: true },
         }
       );
       return {
@@ -120,7 +120,7 @@ module.exports = (plugin) => {
       "plugin::users-permissions.user",
       id,
       {
-        populate: { role: true },
+        populate: { role: true, books: true, reservations: true },
       }
     );
     const userId = user.id;
