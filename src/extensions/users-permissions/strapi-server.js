@@ -10,7 +10,7 @@ module.exports = (plugin) => {
     return sanitizedUser;
   };
   plugin.controllers.user.me = async (ctx) => {
-    //console.log('user.me');
+    console.log('user.me');
     const user = await strapi.query("plugin::users-permissions.user").findOne({
       where: { id: ctx.state.user.id },
       populate: { card: true, branch: true },
