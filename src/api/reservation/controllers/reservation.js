@@ -6,4 +6,15 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::reservation.reservation');
+module.exports = createCoreController('api::reservation.reservation',
+  ({ strapi }) => ({
+    async getMyReservation(ctx) {
+      ctx.query = {
+        ...ctx.query,
+        filters: { ...ctx.query.filters, users_permissions_user: ctx.state.user.id },
+      };
+      const { data, meta } = await super.find(ctx);
+      return { data, meta };
+    },
+  })
+);
